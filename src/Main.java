@@ -6,3 +6,12 @@ public class Main {
         mainWindow.setVisible(true);
     }
 }
+
+class StartDatabase {
+    public static void main(String[] args){
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.setVisible(true);
+
+        mainWindow.openDatabaseUI();
+    }
+}

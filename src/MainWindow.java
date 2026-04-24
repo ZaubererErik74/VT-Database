@@ -1,10 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame{
     MainWindow(){
         this.setTitle("Main Window");
-        this.setSize(1920, 1080);
+        this.setSize(900, 600);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JMenu menuFile = new JMenu("file");
@@ -31,6 +32,7 @@ public class MainWindow extends JFrame{
     void createGUI(){
         JPanel panelDatabase = new JPanel();
         JButton buttonDatabase = new JButton("Administrate Database");
+        buttonDatabase.addActionListener(e -> openDatabaseUI());
         panelDatabase.add(buttonDatabase);
         panelDatabase.setVisible(true);
 
@@ -50,5 +52,9 @@ public class MainWindow extends JFrame{
         this.add(panelDatabase);
         this.add(panelEvent);
         this.add(panelChecklist);
+    }
+    void openDatabaseUI(){
+        DatabaseUI databaseUI = new DatabaseUI();
+        databaseUI.setVisible(true);
     }
 }
