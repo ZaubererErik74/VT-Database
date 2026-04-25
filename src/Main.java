@@ -15,3 +15,12 @@ class StartDatabase {
         mainWindow.openDatabaseUI();
     }
 }
+
+class OpenChecklist {
+    public static void main(String[] args){
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.setVisible(true);
+
+        mainWindow.openChecklistUI();
+    }
+}

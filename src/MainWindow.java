@@ -44,6 +44,7 @@ public class MainWindow extends JFrame{
 
         JPanel panelChecklist = new JPanel();
         JButton buttonChecklist = new JButton("Checklist");
+        buttonChecklist.addActionListener(e -> openChecklistUI());
         panelChecklist.add(buttonChecklist);
         panelChecklist.setVisible(true);
 
@@ -56,5 +57,9 @@ public class MainWindow extends JFrame{
     void openDatabaseUI(){
         DatabaseUI databaseUI = new DatabaseUI();
         databaseUI.setVisible(true);
+    }
+    void openChecklistUI(){
+        ChecklistUI checklistUI = new ChecklistUI();
+        checklistUI.setVisible(true);
     }
 }

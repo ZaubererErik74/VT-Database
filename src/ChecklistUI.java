@@ -1,7 +1,7 @@
 import javax.swing.*;
 
-public class Checklist extends JFrame {
-    Checklist(){
+public class ChecklistUI extends JFrame {
+    ChecklistUI(){
         this.setSize(1920, 1080);
         this.setTitle("Checklist");
     }
